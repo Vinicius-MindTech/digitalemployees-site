@@ -31,20 +31,103 @@
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Digital Employees",
-  "url": "https://digitalemployees.com.br/",
-  "logo": "https://digitalemployees.com.br/favicon.png",
-  "description": "Funcionários digitais de IA que atendem, vendem e cuidam do financeiro e da operação da sua empresa, 24h por dia.",
-  "email": "contato@digitalemployees.com.br",
-  "sameAs": [],
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "contactType": "sales",
-    "url": "https://wa.me/5511999282624",
-    "areaServed": "BR",
-    "availableLanguage": "Portuguese"
-  }
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://digitalemployees.com.br/#organization",
+      "name": "Digital Employees",
+      "url": "https://digitalemployees.com.br/",
+      "logo": "https://digitalemployees.com.br/favicon.png",
+      "image": "https://digitalemployees.com.br/og-image.png",
+      "description": "Funcionários digitais de IA que atendem, vendem e cuidam do financeiro e da operação da sua empresa, 24h por dia.",
+      "email": "contato@digitalemployees.com.br",
+      "areaServed": "BR",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "sales",
+        "url": "https://wa.me/5511999282624",
+        "areaServed": "BR",
+        "availableLanguage": "Portuguese"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://digitalemployees.com.br/#website",
+      "url": "https://digitalemployees.com.br/",
+      "name": "Digital Employees",
+      "inLanguage": "pt-BR",
+      "publisher": { "@id": "https://digitalemployees.com.br/#organization" }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://digitalemployees.com.br/#service",
+      "name": "Funcionários digitais de IA",
+      "serviceType": "Funcionários digitais de IA para empresas",
+      "provider": { "@id": "https://digitalemployees.com.br/#organization" },
+      "areaServed": "BR",
+      "description": "Funcionários digitais de IA que atendem no WhatsApp, vendem, cobram, conciliam o financeiro e cuidam da operação — integrados ao sistema e ao ERP que a sua empresa já usa (Omie, Domínio, SitraWeb e outros).",
+      "availableChannel": {
+        "@type": "ServiceChannel",
+        "serviceUrl": "https://digitalemployees.com.br/",
+        "servicePhone": "+55 11 99928-2624"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://digitalemployees.com.br/#faq",
+      "inLanguage": "pt-BR",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "E se a IA errar?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Decisão importante passa por verificação. Quando não há resposta segura, o funcionário digital escala para um humano — ele não improvisa."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Já tentei chatbot e me frustrei.",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Chatbot segue roteiro e trava. Funcionário digital entende contexto e tem memória — é a diferença entre um formulário e uma pessoa."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Meus clientes vão perceber que é um robô?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A conversa é natural, com contexto e o tom da sua empresa — do jeito que o seu melhor atendente responderia."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quanto custa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Depende da função e do tamanho da operação. O diagnóstico calcula o seu, sem compromisso."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "E os meus dados?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ficam na sua operação, com tratamento conforme a LGPD. O funcionário digital acessa só o que precisa para trabalhar."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "E se minha empresa não tem processo organizado?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "É o que o Raio-X faz primeiro: arruma a operação antes de instalar a IA."
+          }
+        }
+      ]
+    }
+  ]
 }
   </script>
   <style>

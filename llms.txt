@@ -1,0 +1,16 @@
+# Digital Employees
+
+> Funcionários digitais de IA que atendem, vendem, cobram, conciliam o financeiro e cuidam da operação da empresa pelo WhatsApp e pelos sistemas que ela já usa — 24 horas por dia. Integram-se ao sistema e ao ERP existentes (Omie, Domínio, SitraWeb e outros). Atendimento no Brasil, em português.
+
+## O que é um funcionário digital
+- Não é chatbot nem automação de roteiro: entende contexto, tem memória e escala para um humano quando não há resposta segura.
+- Cada funcionário assume uma função inteira: atendimento, vendas, financeiro, cobrança, operação e um "maestro" que coordena o time.
+- Antes de instalar a IA, o método Raio-X organiza a operação.
+
+## Links
+- [Site](https://digitalemployees.com.br/): o que fazem, exemplos de funcionários e o diagnóstico gratuito.
+- [Falar no WhatsApp](https://wa.me/5511999282624): conversa direta, sem compromisso.
+
+## Contato
+- E-mail: contato@digitalemployees.com.br
+- Dados tratados conforme a LGPD.
