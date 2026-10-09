@@ -6,11 +6,26 @@
 <meta name="robots" content="noindex">
 <title>Diagnóstico | Digital Employees</title>
 <link rel="icon" href="/favicon.png">
-<meta http-equiv="refresh" content="0; url=https://wa.me/5511963246378?text=Vim%20pelo%20Instagram%20e%20quero%20o%20diagn%C3%B3stico%20da%20minha%20empresa">
-<script>location.replace("https://wa.me/5511963246378?text=Vim%20pelo%20Instagram%20e%20quero%20o%20diagn%C3%B3stico%20da%20minha%20empresa");</script>
+<script>
+  // ?u=<@ do Instagram> vem do direct automático ({{username}} na Zernio).
+  // O @ entra no texto do WhatsApp para o CRM ligar a pessoa do comentário
+  // ao contato do WhatsApp (sem duplicar e sem perder a origem).
+  (function () {
+    var u = (new URLSearchParams(location.search).get("u") || "").replace(/^@/, "");
+    var ok = /^[A-Za-z0-9._]{1,30}$/.test(u);
+    var texto = ok
+      ? "Vim pelo Instagram (@" + u + ") e quero o diagnóstico da minha empresa"
+      : "Vim pelo Instagram e quero o diagnóstico da minha empresa";
+    var destino = "https://wa.me/5511963246378?text=" + encodeURIComponent(texto);
+    location.replace(destino);
+    document.addEventListener("DOMContentLoaded", function () {
+      document.getElementById("abrir").href = destino;
+    });
+  })();
+</script>
 <style>body{font-family:system-ui,sans-serif;display:grid;place-items:center;min-height:100vh;margin:0;padding:0 16px;background:#fff;color:#111;text-align:center}a{color:#0a7a50}</style>
 </head>
 <body>
-<p>Abrindo o WhatsApp…<br><a href="https://wa.me/5511963246378?text=Vim%20pelo%20Instagram%20e%20quero%20o%20diagn%C3%B3stico%20da%20minha%20empresa">Toque aqui se não abrir</a></p>
+<p>Abrindo o WhatsApp…<br><a id="abrir" href="https://wa.me/5511963246378?text=Vim%20pelo%20Instagram%20e%20quero%20o%20diagn%C3%B3stico%20da%20minha%20empresa">Toque aqui se não abrir</a></p>
 </body>
 </html>
