@@ -7,15 +7,18 @@
 <title>Diagnóstico | Digital Employees</title>
 <link rel="icon" href="/favicon.png">
 <script>
-  // ?u=<@ do Instagram> vem do direct automático ({{username}} na Zernio).
-  // O @ entra no texto do WhatsApp para o CRM ligar a pessoa do comentário
-  // ao contato do WhatsApp (sem duplicar e sem perder a origem).
+  // Link de origem da rede Instagram. ?u=<@ da pessoa> e ?p=<ref do post> entram no
+  // texto do WhatsApp para o CRM saber de qual rede, de quem e de qual post veio
+  // a conversa. Formato lido na VPS (social-ligar.py / crm-insta-ligar.py):
+  //   "Vim pelo <Rede> (@u) e quero o diagnóstico da minha empresa · ref <p>"
   (function () {
-    var u = (new URLSearchParams(location.search).get("u") || "").replace(/^@/, "");
-    var ok = /^[A-Za-z0-9._]{1,30}$/.test(u);
-    var texto = ok
-      ? "Vim pelo Instagram (@" + u + ") e quero o diagnóstico da minha empresa"
-      : "Vim pelo Instagram e quero o diagnóstico da minha empresa";
+    var q = new URLSearchParams(location.search);
+    var u = (q.get("u") || "").replace(/^@/, "");
+    var p = q.get("p") || "";
+    var texto = "Vim pelo Instagram" +
+      (/^[A-Za-z0-9._]{1,30}$/.test(u) ? " (@" + u + ")" : "") +
+      " e quero o diagnóstico da minha empresa" +
+      (/^[A-Za-z0-9]{3,12}$/.test(p) ? " · ref " + p : "");
     var destino = "https://wa.me/5511963246378?text=" + encodeURIComponent(texto);
     location.replace(destino);
     document.addEventListener("DOMContentLoaded", function () {

@@ -7,7 +7,7 @@
 <title>Diagnóstico | Digital Employees</title>
 <link rel="icon" href="/favicon.png">
 <script>
-  // Link de origem da rede YouTube. ?u=<@ da pessoa> e ?p=<ref do post> entram no
+  // Link de origem da rede LinkedIn. ?u=<@ da pessoa> e ?p=<ref do post> entram no
   // texto do WhatsApp para o CRM saber de qual rede, de quem e de qual post veio
   // a conversa. Formato lido na VPS (social-ligar.py / crm-insta-ligar.py):
   //   "Vim pelo <Rede> (@u) e quero o diagnóstico da minha empresa · ref <p>"
@@ -15,7 +15,7 @@
     var q = new URLSearchParams(location.search);
     var u = (q.get("u") || "").replace(/^@/, "");
     var p = q.get("p") || "";
-    var texto = "Vim pelo YouTube" +
+    var texto = "Vim pelo LinkedIn" +
       (/^[A-Za-z0-9._]{1,30}$/.test(u) ? " (@" + u + ")" : "") +
       " e quero o diagnóstico da minha empresa" +
       (/^[A-Za-z0-9]{3,12}$/.test(p) ? " · ref " + p : "");
@@ -29,6 +29,6 @@
 <style>body{font-family:system-ui,sans-serif;display:grid;place-items:center;min-height:100vh;margin:0;padding:0 16px;background:#fff;color:#111;text-align:center}a{color:#0a7a50}</style>
 </head>
 <body>
-<p>Abrindo o WhatsApp…<br><a id="abrir" href="https://wa.me/5511963246378?text=Vim%20pelo%20YouTube%20e%20quero%20o%20diagn%C3%B3stico%20da%20minha%20empresa">Toque aqui se não abrir</a></p>
+<p>Abrindo o WhatsApp…<br><a id="abrir" href="https://wa.me/5511963246378?text=Vim%20pelo%20LinkedIn%20e%20quero%20o%20diagn%C3%B3stico%20da%20minha%20empresa">Toque aqui se não abrir</a></p>
 </body>
 </html>
